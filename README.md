@@ -1,32 +1,31 @@
-# R2Gen
+# GMoD
 
-This is the implementation of [Generating Radiology Reports via Memory-driven Transformer](https://arxiv.org/pdf/2010.16056.pdf) at EMNLP-2020.
+This is the implementation of [GMoD: Graph-driven Momentum Distillation
+Framework with Active Perception of Disease
+Severity for Radiology Report Generation] at MICCAI2024.
 
-## Citations
-
-If you use or extend our work, please cite our paper at EMNLP-2020.
-```
-@inproceedings{chen-emnlp-2020-r2gen,
-    title = "Generating Radiology Reports via Memory-driven Transformer",
-    author = "Chen, Zhihong and
-      Song, Yan  and
-      Chang, Tsung-Hui and
-      Wan, Xiang",
-    booktitle = "Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing",
-    month = nov,
-    year = "2020",
-}
-```
 
 ## Requirements
 
-- `torch==1.7.1`
-- `torchvision==0.8.2`
-- `opencv-python==4.4.0.42`
+- `einops==0.8.0`
+- `matplotlib==3.7.1`
+- `nltk==3.8.1`
+- `numpy==1.24.2`
+- `opencv_python==4.7.0.72`
+- `pandas==1.5.3`
+- `Pillow==9.4.0`
+- `Pillow==10.3.0`
+- `scikit_learn==1.2.2`
+- `scipy==1.9.1`
+- `timm==0.4.12`
+- `torch==2.0.0+cu118`
+- `torch_geometric==2.3.1`
+- `tqdm==4.65.0`
 
 
-## Download R2Gen
-You can download the models we trained for each dataset from [here](https://github.com/zhjohnchan/R2Gen/blob/main/data/r2gen.md).
+
+## Download GMoD
+You can download the models we trained for each dataset from [here](https://github.com/xzp9999/GMoD-mian/blob/main/data/r2gen.md).
 
 ## Datasets
 We use two datasets (IU X-Ray and MIMIC-CXR) in our paper.
@@ -38,18 +37,10 @@ For `MIMIC-CXR`, you can download the dataset from [here](https://physionet.org/
 NOTE: The `IU X-Ray` dataset is of small size, and thus the variance of the results is large.
 There have been some works using `MIMIC-CXR` only and treating the whole `IU X-Ray` dataset as an extra test set.
 
+After downloading the raw dataset, you need to add count_nounphrase.json and mimic-cxr-2.0.0-chexpert.csv to the . /mimic_cxr/ or . /iu_xray/ directory
+
 ## Train
 
-Run `bash train_iu_xray.sh` to train a model on the IU X-Ray data.
+Run `bash main_train.py` to train the model.
 
-Run `bash train_mimic_cxr.sh` to train a model on the MIMIC-CXR data.
 
-## Test
-
-Run `bash test_iu_xray.sh` to test a model on the IU X-Ray data.
-
-Run `bash test_mimic_cxr.sh` to test a model on the MIMIC-CXR data.
-
-## Visualization
-
-Run `bash plot_mimic_cxr.sh` to visualize the attention maps on the MIMIC-CXR data.

@@ -4,9 +4,10 @@
 This is the implementation of [GMoD: Graph-driven Momentum Distillation
 Framework with Active Perception of Disease
 Severity for Radiology Report Generation] at MICCAI2024.
+![overview]()
 
-
-## Requirements
+## Getting Started
+### Requirements
 
 - `einops==0.8.0`
 - `matplotlib==3.7.1`
@@ -25,10 +26,10 @@ Severity for Radiology Report Generation] at MICCAI2024.
 
 
 
-## Download GMoD
+### Download GMoD
 You can download the models we trained for each dataset from [here](https://github.com/xzp9999/GMoD-mian/blob/main/data/r2gen.md).
 
-## Datasets
+### Datasets
 We use two datasets (IU X-Ray and MIMIC-CXR) in our paper.
 
 For `IU X-Ray`, you can download the dataset from [here](https://drive.google.com/file/d/1c0BXEuDy8Cmm2jfN0YYGkQxFZd2ZIoLg/view?usp=sharing) and then put the files in `data/iu_xray`.
@@ -40,7 +41,7 @@ There have been some works using `MIMIC-CXR` only and treating the whole `IU X-R
 
 After downloading the raw dataset, you need to add count_nounphrase.json and mimic-cxr-2.0.0-chexpert.csv to the . /mimic_cxr/ or . /iu_xray/ directory
 
-## Train
+### Train
 
 Run `bash main_train.py` to train the model.
 

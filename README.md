@@ -1,5 +1,6 @@
 # GMoD
 
+## Introduction
 This is the implementation of [GMoD: Graph-driven Momentum Distillation
 Framework with Active Perception of Disease
 Severity for Radiology Report Generation] at MICCAI2024.

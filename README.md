@@ -4,7 +4,10 @@
 This is the implementation of [GMoD: Graph-driven Momentum Distillation
 Framework with Active Perception of Disease
 Severity for Radiology Report Generation] at MICCAI2024.
-![overview]()
+<br>
+<br>
+<br>
+![overview](https://github.com/xzp9999/GMoD-mian/blob/main/Model.png)
 
 ## Getting Started
 ### Requirements
